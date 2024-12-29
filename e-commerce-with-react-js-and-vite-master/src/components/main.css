@@ -1,0 +1,17 @@
+.baad{
+    margin : 0px;
+}
+.hover-button {
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .hover-button:hover {
+    background-color: #0B253E; /* Change to desired hover background color */
+    color: white; /* Change to desired hover text color */
+  }
+  .bgg{
+border-radius: 10px;  
+}
+.rad{
+    border-radius: 10px;
+}

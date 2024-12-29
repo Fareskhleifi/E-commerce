@@ -1,0 +1,11 @@
+.butt{
+    background-color: #0B253E !important ;
+    color :whitesmoke !important;
+}
+.butt:hover{
+    background-color: rgb(239, 84, 27) !important;
+    color :#0B253E !important;
+}
+.radius{
+    border-radius: 10px;
+}

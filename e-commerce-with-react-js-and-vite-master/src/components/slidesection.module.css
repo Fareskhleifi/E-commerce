@@ -1,0 +1,269 @@
+/* slide.module.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+.slide {
+    margin: 0;
+    background-color: whitesmoke;
+    color: #eee;
+    font-family: Poppins;
+    font-size: 12px;
+    width: 80%;
+    height: 70%;
+    margin-left: 7.5%;
+    border-radius: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+header {
+    width: 100%;
+    max-width: 75%;
+    margin: auto;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+}
+header a {
+    color: #eee;
+    margin-right: 40px;
+}
+.carousel {
+    height: 70vh;
+    margin-top: -50px;
+    width: 80vw;
+    overflow: hidden;
+    position: relative;
+}
+.carousel .list .item {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0 0 0 0;
+}
+.carousel .list .item .Image {
+    height: 100%;
+    width: 50%;
+    object-fit: cover;
+    border-radius: 0px 10px 10px 0px;
+    margin-left: 50%;
+}
+.carousel .list .item .content {
+    position: absolute;
+    top: 30%;
+    width: 100%;
+    max-width: 80%;
+    left: 44%;
+    transform: translateX(-50%);
+    padding-right: 40%;
+    box-sizing: border-box;
+    color: #0B253E;
+    text-shadow: 0 5px 10px #0004;
+}
+.carousel .list .item .author {
+    font-weight: bold;
+    letter-spacing: 10px;
+    
+}
+.carousel .list .item .title,
+.carousel .list .item .topic {
+    font-size: 5em;
+    font-weight: bold;
+    line-height: 1.3em;
+}
+.carousel .list .item .topic {
+    color: #f1683a;
+}
+.carousel .list .item .buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 130px);
+    grid-template-rows: 40px;
+    gap: 5px;
+    margin-top: 20px;
+    
+}
+.carousel .list .item .buttons Link {
+    border: none;
+    background-color: #0B253E;
+    letter-spacing: 3px;
+    font-family: Poppins;
+    font-weight: 500;
+    border-radius: 10px;
+    color: whitesmoke;
+}
+.carousel .list .item .buttons Link:hover {
+    background-color:#f1683a ;
+
+}
+
+.carousel .list .item .buttons button:nth-child(2) {
+    background-color: transparent;
+    border: 1px solid #0B253E;
+    color: #0B253E;
+}
+.thumbnail {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    width: max-content;
+    z-index: 100;
+    display: flex;
+    gap: 20px;
+}
+.thumbnail .item {
+    width: 150px;
+    height: 220px;
+    flex-shrink: 0;
+    position: relative;
+}
+.thumbnail .item img {
+    width: 80%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 1px 1px 0 rgb(145, 145, 145);
+}
+.thumbnail .item .content {
+    color: #fff;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+}
+.thumbnail .item .content .title {
+    font-weight: 500;
+}
+.thumbnail .item .content .description {
+    font-weight: 300;
+}
+.arrows {
+    position: absolute;
+    top: 80%;
+    right: 52%;
+    z-index: 100;
+    width: 300px;
+    max-width: 30%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.arrows button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #0B253E;
+    margin-top: 30%;
+    margin-left: 3.5%;
+    border: none;
+    color: #fff;
+    font-family: monospace;
+    font-weight: bold;
+    transition: .5s;
+}
+.arrows button:hover {
+    background-color: #fff;
+    color: #000;
+   
+}
+.arrows{
+   
+   left: 10%;
+   bottom: 10%;
+}
+.carousel .list .item:nth-child(1) {
+    z-index: 1;
+}
+
+.carousel .list .item:nth-child(1) .content .author,
+.carousel .list .item:nth-child(1) .content .title,
+.carousel .list .item:nth-child(1) .content .topic,
+.carousel .list .item:nth-child(1) .content .des,
+.carousel .list .item:nth-child(1) .content .buttons {
+    transform: translateX(0);
+    opacity: 1;
+    transition: .2s;
+}
+
+.carousel .list .item:nth-child(1) .content .title {
+    transition-delay: .2s;
+}
+
+.carousel .list .item:nth-child(1) .content .topic {
+    transition-delay: .2s;
+}
+
+.carousel .list .item:nth-child(1) .content .des {
+    transition-delay: .2s;
+}
+
+.carousel .list .item:nth-child(1) .content .buttons {
+    transition-delay: .2s;
+}
+
+.carousel .list .item:nth-child(2) .content .author,
+.carousel .list .item:nth-child(2) .content .title,
+.carousel .list .item:nth-child(2) .content .topic,
+.carousel .list .item:nth-child(2) .content .des,
+.carousel .list .item:nth-child(2) .content .buttons {
+    transform: translateX(100px);
+    opacity: 0;
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+.carousel .list .item:nth-child(2) {
+    z-index: 0;
+}
+
+.carousel.next .list .item:nth-child(2) .content .author,
+.carousel.next .list .item:nth-child(2) .content .title,
+.carousel.next .list .item:nth-child(2) .content .topic,
+.carousel.next .list .item:nth-child(2) .content .des,
+.carousel.next .list .item:nth-child(2) .content .buttons {
+    transform: translateX(0);
+    opacity: 1;
+    transition: 1s;
+}
+
+.carousel.next .list .item:nth-child(2) .content .title {
+    transition-delay: .2s;
+}
+
+.carousel.next .list .item:nth-child(2) .content .topic {
+    transition-delay: .2s;
+}
+
+.carousel.next .list .item:nth-child(2) .content .des {
+    transition-delay: .2s;
+}
+
+.carousel.next .list .item:nth-child(2) .content .buttons {
+    transition-delay: .2s;
+}
+
+.carousel .list .item:nth-child(n+3) .content .author,
+.carousel .list .item:nth-child(n+3) .content .title,
+.carousel .list .item:nth-child(n+3) .content .topic,
+.carousel .list .item:nth-child(n+3) .content .des,
+.carousel .list .item:nth-child(n+3) .content .buttons {
+    transform: translateX(100px);
+    opacity: 0;
+    transition: none;
+}
+
+.carousel.next .list .item {
+    animation: nextLinear var(--timeAutoNext) linear infinite;
+}
+
+@keyframes nextLinear {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(100px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}

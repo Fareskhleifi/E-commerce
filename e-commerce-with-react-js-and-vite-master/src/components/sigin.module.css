@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css");
+
+* {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.login {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  background-color: whitesmoke;
+ 
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+  background-color: whitesmoke;
+  border-radius: 1rem;
+
+}
+
+.h2login {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin-bottom: 50px;
+  font-size: 20px;
+  font-weight: 100;
+  position: relative;
+  padding: 5px;
+}
+
+.h2login::after {
+  content: '';
+  position: absolute;
+  left: 7px;
+  right: 0;
+  bottom: 4px; /* Adjust the value to add space between text and underline */
+  height: 2px; /* The thickness of the underline */
+  background-color: #0B253E;
+  width: 44px;
+}
+.h2Reg {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin-bottom: 50px;
+  font-size: 20px;
+  font-weight: 100;
+  position: relative;
+  padding: 10px;
+}
+
+.h2Reg::after {
+  content: '';
+  position: absolute;
+  left: 12px;
+  right: 0;
+  bottom: 4px; /* Adjust the value to add space between text and underline */
+  height: 2px; /* The thickness of the underline */
+  background-color: #0B253E;
+  width: 70px;
+}
+
+
+
+.img {
+  width: 100%;
+  height: 900px;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+}
+
+.form {
+  display: none;
+  transform: scale(0);
+  opacity: 0;
+}
+
+.form.active {
+  display: flex;
+  transform: scale(1);
+  opacity: 1;
+  flex-direction: column;
+  gap: 10px;
+  animation: show 1s;
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+input {
+  padding: 10px;
+  outline: none;
+  border: 1px solid #5E5763 ;
+  border-radius: 10px;
+  background-color: #FBFBFC;
+}
+
+.password,
+.email {
+  border: none;
+  padding: 15px;
+  width: 100%;
+}
+
+.email {
+  width: 100%;
+}
+
+.pass-reset {
+  border: 1px solid #B0B6D0;
+  border-radius: 10px;
+  display: flex;
+  align-content: flex-start;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.reset-password {
+  font-size: 15px;
+  padding-right: 10px;
+}
+
+.remember-box {
+  border: none;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.remember-text {
+  font-size: 15px;
+}
+
+.remember {
+  margin-right: 15px;
+}
+
+
+.btn {
+  background-color: #0B253E !important; /* Couleur de fond initiale */
+  color: #ffffff !important; /* Couleur du texte */
+  border-radius: 9px; /* Coins arrondis */
+  padding: 15px; /* Espacement interne */
+  outline: none; /* Retirer le contour par défaut */
+  border: none; /* Retirer la bordure */
+  cursor: pointer; /* Curseur pointer pour la main */
+  font-size: 15px; /* Taille de la police */
+  transition: all ease 0.3s; /* Transition douce pour les effets de survol */
+}
+
+.btn:hover {
+  background-color: white !important; /* Couleur de fond au survol */
+  color: #0B253E !important; /* Couleur du texte au survol */
+}
+
+
+.bt-gogle-auth {
+  background-color: #FBFBFC !important;
+  color: black;
+  border-radius: 9px;
+  border: 1px solid #B0B6D0;
+  padding: 15px;
+  cursor: pointer; /* Curseur pointer pour la main */
+  font-size: 15px
+}
+
+
+.google-icon {
+  font-family: 'Roboto', sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  padding-right: 10px;
+  color: red; 
+  margin-top: 3%;
+}
+.mt10 {
+  margin-top: 100%;
+}
+
+p {
+  font-size: 15px;
+}
+
+.or {
+  color: #B0B6D0;
+  align-self: center;
+  text-align: center;
+}
+
+.or::before {
+  content: "────────────────────────";
+  margin-right: 10px;
+}
+
+.or::after {
+  content: "────────────────────────";
+  margin-left: 10px;
+}
+
+.astyle {
+  text-decoration: none;
+  color: #0B253E;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+label {
+  font-size: 15px;
+}
+
+.astyle:hover {
+  color: #FF6910;
+}
+
+@media screen and (max-width: 810px) {
+  .container {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    border-radius: 0;
+    width: 100%;
+    align-items: flex-start;
+    position: absolute;
+    height: 100%;
+  }
+
+  .img {
+    display: none;
+  }
+
+  .row {
+    position: absolute;
+    flex-direction: column;
+    width: 100%;
+    border: 0;
+  }
+
+  .form {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .pass-reset {
+    flex-direction: column;
+    align-items: center;
+    border: none;
+  }
+
+  .remember-box {
+    flex-direction: row;
+  }
+
+  .email,
+  .password {
+    width: 100%;
+    border: 1px solid #5E5763;
+    margin-bottom: 10px;
+  }
+
+  .or {
+    width: 100%;
+  }
+
+  .or::before,
+  .or::after {
+    content: '';
+    padding: 0;
+    margin: 0;
+  }
+}
